@@ -404,7 +404,7 @@
 
         <div class="row">
           <div class="col-lg-12 mb-5">
-            <form action="send_mail.php" >
+            <form ction="#" method="post" enctype="text/plain">
               <div class="form-group row">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <input type="text" name="name" class="form-control" placeholder="First name">
@@ -427,7 +427,7 @@
               </div>
               <div class="form-group row">
                 <div class="col-md-6 mr-auto">
-                  <input type="submit" class="btn btn-block btn-primary text-white py-2 px-5" value="Send Message">
+                  <button type="submit" class="btn btn-block btn-primary text-white py-2 px-5" onclick="sendEmail();" id="btn-submit">Send Message</button>
                 </div>
               </div>
             </form>
@@ -513,6 +513,19 @@
             </script>
   
   <script src="js/main.js"></script>
+
+  <script>
+    document.getElementById("btn-submit").addEventListener("click", function(event){
+      event.preventDefault()
+    });
+    </script>
+
+  <script>
+    function sendEmail() 
+    {
+      location.href  = "mailto:sseventhyd@gmail.com";
+    }
+    </script>
 
   </body>
 </html>
